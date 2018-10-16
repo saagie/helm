@@ -4,3 +4,6 @@ FROM lachlanevenson/k8s-kubectl:v1.12.1
 COPY --from=0 /usr/local/bin/helm /usr/local/bin/helm
 ENTRYPOINT [] 
 CMD ["/bin/sh"]
+RUN apk add --update bash \
+ && rm /var/cache/apk/*
+
