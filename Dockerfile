@@ -1,3 +1,6 @@
-FROM devth/helm:v2.9.1
+FROM lachlanevenson/k8s-helm:v2.11.0
 
-RUN apk add ncurses
+FROM lachlanevenson/k8s-kubectl:v1.12.1
+COPY --from=0 /usr/local/bin/helm /usr/local/bin/helm
+ENTRYPOINT[] 
+CMD["/bin/sh"]
