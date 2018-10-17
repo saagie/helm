@@ -5,5 +5,6 @@ COPY --from=0 /usr/local/bin/helm /usr/local/bin/helm
 ENTRYPOINT [] 
 CMD ["/bin/sh"]
 RUN apk add --update bash \
+ && apk add --update openssl \
  && rm /var/cache/apk/*
 
