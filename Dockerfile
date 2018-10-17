@@ -4,7 +4,5 @@ FROM lachlanevenson/k8s-kubectl:v1.12.1
 COPY --from=0 /usr/local/bin/helm /usr/local/bin/helm
 ENTRYPOINT [] 
 CMD ["/bin/sh"]
-RUN apk add --update bash \
- && apk add --update openssl \
- && rm /var/cache/apk/*
-
+RUN apk add --update bash openssl wget ca-certificates \
+    && rm /var/cache/apk/*
