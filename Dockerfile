@@ -6,5 +6,5 @@ ENTRYPOINT []
 CMD ["/bin/sh"]
 RUN apk add --update bash openssl wget ca-certificates curl openjdk8 nss git
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories \
-    && apk add --update go \
+    && apk add --update go make musql-dev\
     && rm /var/cache/apk/*
