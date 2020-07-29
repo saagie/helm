@@ -1,6 +1,6 @@
-FROM lachlanevenson/k8s-helm:v2.14.2
+FROM lachlanevenson/k8s-helm:v3.2.4
 
-FROM lachlanevenson/k8s-kubectl:v1.12.1
+FROM lachlanevenson/k8s-kubectl:v1.18.6
 COPY --from=0 /usr/local/bin/helm /usr/local/bin/helm
 ENTRYPOINT [] 
 CMD ["/bin/sh"]
